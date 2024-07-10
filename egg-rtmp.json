@@ -2,7 +2,7 @@
     "meta": {
         "version": "v1.0.0",
         "name": "Nginx RTMP",
-        "author": "Your Name",
+        "author": "Fabian Maier",
         "description": "A Nginx server with RTMP module",
         "image": "ghcr.io/pterodactyl/yolks:debian"
     },
@@ -11,8 +11,8 @@
         "commands": [
             "apt-get update",
             "apt-get install -y nginx libnginx-mod-rtmp git",
-            "git clone https://github.com/foxyyyyyyyyyyyyy/ngnixegg.git /home/container/repo",
-            "cp /home/container/repo/path-to-your-nginx-conf/nginx.conf /home/container/nginx.conf"
+            "git clone https://github.com/foxyyyyyyyyyyyyy/ngnixegg.git /home/container/",
+            "cp /home/container/nginx/nginx.conf /home/container/nginx.conf"
         ]
     },
     "files": {
