@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "version": "v1.0.0",
+        "name": "Nginx RTMP",
+        "author": "Your Name",
+        "description": "A Nginx server with RTMP module",
+        "image": "ghcr.io/pterodactyl/yolks:debian"
+    },
+    "build": {
+        "entrypoint": "bash",
+        "commands": [
+            "apt-get update",
+            "apt-get install -y nginx libnginx-mod-rtmp git",
+            "git clone https://github.com/foxyyyyyyyyyyyyy/ngnixegg.git /home/container/repo",
+            "cp /home/container/repo/path-to-your-nginx-conf/nginx.conf /home/container/nginx.conf"
+        ]
+    },
+    "files": {
+        "config/nginx.conf": {
+            "parser": "text",
+            "find": {},
+            "match": {}
+        }
+    },
+    "startup": {
+        "done": "Configuration complete; ready for start up",
+        "userInteraction": []
+    },
+    "logs": {
+        "custom": false,
+        "location": "/home/container/logs/error.log"
+    },
+    "config": {
+        "files": {
+            "config/nginx.conf": {
+                "parser": "text",
+                "find": {},
+                "match": {}
+            }
+        }
+    },
+    "install": {
+        "script": "#!/bin/bash\napt-get update\napt-get install -y nginx libnginx-mod-rtmp git\n"
+    },
+    "variables": []
+}
